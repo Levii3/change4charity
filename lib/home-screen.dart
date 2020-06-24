@@ -6,6 +6,7 @@ import 'package:change4charity/report-page.dart';
 import 'package:change4charity/share-page.dart';
 import 'package:change4charity/states-page.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/platform_interface.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:change4charity/dialog-helper.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -23,13 +24,14 @@ class _MyAppState extends State<MyApp> {
   final tabs = [
     Center(
       child: WebView(
-        initialUrl: 'http://www.miteinanderfueruganda.de',
-        javascriptMode: JavascriptMode.unrestricted,),),
+        initialUrl: 'http://miteinanderfueruganda.de/',
+        javascriptMode: JavascriptMode.unrestricted,
+      ),
+    ),
     Report(),
     ExitDialog(),
     States(),
     ProfilePage()
-
   ];
   int _currentIndex = 0;
   int _currentTabIndex = 0;
@@ -60,7 +62,7 @@ class _MyAppState extends State<MyApp> {
               ),
               decoration: BoxDecoration(
                   gradient:
-                  LinearGradient(colors: [Colors.white, Colors.redAccent])),
+                      LinearGradient(colors: [Colors.white, Colors.redAccent])),
             ),
             ...this.menus.map((item) {
               return new Column(
@@ -79,7 +81,7 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
- /*     bottomNavigationBar: BottomNavigationBar(
+      /*     bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTabIndex,
         items: [
           BottomNavigationBarItem(
@@ -110,7 +112,7 @@ class _MyAppState extends State<MyApp> {
           });
         },
       ),*/
- /*     bottomNavigationBar: ConvexAppBar(
+      /*     bottomNavigationBar: ConvexAppBar(
         backgroundColor: Colors.redAccent,
         style: TabStyle.fixedCircle,
 
@@ -129,12 +131,17 @@ class _MyAppState extends State<MyApp> {
         },
       ),*/
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton:
-      FloatingActionButton(
-        child: Icon(Icons.sentiment_dissatisfied,), onPressed: () {setState(() {
-        _currentTabIndex = 2;
-      });},backgroundColor: Colors.redAccent,),
-
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.sentiment_dissatisfied,
+        ),
+        onPressed: () {
+          setState(() {
+            _currentTabIndex = 2;
+          });
+        },
+        backgroundColor: Colors.redAccent,
+      ),
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Container(
@@ -142,9 +149,9 @@ class _MyAppState extends State<MyApp> {
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-
             children: <Widget>[
-              IconButton(icon: Icon(Icons.home),
+              IconButton(
+                icon: Icon(Icons.home),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
@@ -153,7 +160,8 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
 
-              IconButton(icon: Icon(Icons.insert_chart),
+              IconButton(
+                icon: Icon(Icons.insert_chart),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
@@ -163,7 +171,8 @@ class _MyAppState extends State<MyApp> {
               ),
               SizedBox(width: 40), // The dummy child
 
-              IconButton(icon: Icon(Icons.euro_symbol),
+              IconButton(
+                icon: Icon(Icons.euro_symbol),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
