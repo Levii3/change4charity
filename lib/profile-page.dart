@@ -1,40 +1,4 @@
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Haals001
-Learn Git and GitHub without any code!
-
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-Levii3 /
-change4charity
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-change4charity/lib/profile-page.dart
-@iksar001
-iksar001 add Profile page
-Latest commit ade702c 13 hours ago
-History
-2 contributors
-@Levii3
-@iksar001
-129 lines (116 sloc) 3.11 KB
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class ProfilePage extends StatefulWidget {
