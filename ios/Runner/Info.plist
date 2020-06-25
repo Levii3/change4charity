@@ -1,3 +1,40 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@Haals001
+Learn Git and GitHub without any code!
+
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+Levii3 /
+change4charity
+
+1
+0
+
+    0
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+change4charity/ios/Runner/Info.plist
+@smailosk
+smailosk Webview for android and ios - done
+Latest commit aaef963 12 hours ago
+History
+2 contributors
+@Levii3
+@smailosk
+57 lines (54 sloc) 1.75 KB
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -43,5 +80,18 @@
 	<false/>
 	<key>io.flutter.embedded_views_preview</key>
     <string>YES</string>
+
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+        <true/>
+    </dict>
+
+
 </dict>
 </plist>
+
+
+
