@@ -85,7 +85,7 @@ class ExitDialog extends StatelessWidget {
                 onPressed: () {
                   // writeData('$amount');
                   // globals.betrag = readData() as double;
-                  //  Navigator.push(context, MaterialPageRoute(builder: (context) => States()),);
+                  //  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()),);
                   writeData(c);
                   print(readData());
                 },

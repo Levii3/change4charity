@@ -21,13 +21,15 @@ class _MyAppState extends State<MyApp> {
     {'title': 'Share', 'icon': Icon(Icons.share), 'page': SharePage()},
   ];
   final tabs = [
+    States(),
     Center(
       child: WebView(
         initialUrl: 'http://www.miteinanderfueruganda.de',
         javascriptMode: JavascriptMode.unrestricted,),),
-    Report(),
+
     ExitDialog(),
-    States(),
+    Report(),
+
     ProfilePage()
 
   ];
@@ -144,7 +146,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
 
             children: <Widget>[
-              IconButton(icon: Icon(Icons.home),
+              IconButton(icon: Icon(Icons.euro_symbol),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
@@ -152,8 +154,7 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
               ),
-
-              IconButton(icon: Icon(Icons.insert_chart),
+              IconButton(icon: Icon(Icons.home),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
@@ -161,9 +162,11 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
               ),
+
+
               SizedBox(width: 40), // The dummy child
 
-              IconButton(icon: Icon(Icons.euro_symbol),
+              IconButton(icon: Icon(Icons.insert_chart),
                 iconSize: 32,
                 onPressed: () {
                   setState(() {
